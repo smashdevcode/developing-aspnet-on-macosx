@@ -6,21 +6,6 @@
 * Using OmniSharp for Development
 * Using Yeoman to generate an ASP.NET project
 
-## TODO
-
-1. Review the installation instructions and make sure that they still work for the latest version of ASP.NET
-1. Show some of the KVM commands and why you would use them
-1. Show how to run the ASP.NET samples
-1. Show where packages are kept
-1. Try the various ASP.NET Yeoman templates (i.e. controllers, views, etc.)
-
-## Random Notes
-
-1. Had to install Grunt in order for the `kpm restore` to work on the ASP.NET Yeoman project
-1. Had to increase the max open file limits [http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/](http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/)
- 1. After creating those configuration files, I had to then restart
- 1. Then the user file limits were change (confirmed by running command `ulimit -a`)
-
 ## Quick ASP.NET 5 Overview
 
 See [http://gunnarpeipman.com/2014/10/asp-net-5-what-are-kre-kvm-kpm/](http://gunnarpeipman.com/2014/10/asp-net-5-what-are-kre-kvm-kpm/)
@@ -35,32 +20,44 @@ K has three components:
 
 ## Installing ASP.NET
 
-Get ASP.NET for your platform [https://github.com/aspnet/Home](https://github.com/aspnet/Home)
+Information about ASP.NET 5 can be found at  [https://github.com/aspnet/Home](https://github.com/aspnet/Home)
 
-### Mac OS X Requirements
+### Install GitHub for Mac
 
-* Mono 3.4.1 or later
-* bash or zsh and curl
-
-### Install Node.js
-
-TODO
-
-### Install Grunt
-
-TODO
-
-### Install Yeoman
-
-TODO
+See [GitHub](https://github.com)
 
 ### Install Homebrew
 
 See [Homebrew](http://brew.sh)
 
 * Run command `brew help` to check if Homebrew is already installed
-* Install Homebrew
-* Run command `brew doctor` immediately after installation completes
+* Install Homebrew by running the command `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* Run commands `brew update` and `brew doctor` immediately after installation completes
+
+### Install Node.js
+
+Confirm if you have Node.js installed by running the command `node -v`.
+
+If you don't have Node.js installed, see [Node.js](https://nodejs.org) to download the installer.
+
+### Install Grunt
+
+Grunt is used when building the sample ASP.NET projects, so let's go ahead and get that now.
+
+To confirm if you have Grunt installed, run the command `grunt -h`.
+
+If you don't have Grunt installed, do the following:
+
+1. Make sure that your npm is up-to-date by running `sudo npm install npm -g`
+1. Then install the Grunt CLI by running the command `sudo npm install -g grunt-cli`
+
+### Install Yeoman
+
+Yeoman is used to scaffold ASP.NET projects.
+
+To confirm if you have Yeoman installed, run the command `yo --version`.
+
+To install Yeoman, run the command `npm install -g yo`.
 
 ### Install the K Version Manager (KVM)
 
@@ -78,9 +75,7 @@ This command will download the specified version of the K Runtime Environment (K
 
 ### Running the samples
 
-TODO Need to edit/rewrite
-
-1. Clone the Home repository
+1. Clone the Home repository at [https://github.com/aspnet/Home](https://github.com/aspnet/Home)
 2. Change directory to the folder of the sample you want to run
 3. Run ```kpm restore``` to restore the packages required by that sample.
 4. You should see a bunch of output as all the dependencies of the app are downloaded from MyGet.
@@ -135,3 +130,19 @@ Available generators:
 * aspnet:PackageJson
 * aspnet:TextFile
 * aspnet:TypeScript
+
+## Increasing the Maximum Open Files Limit
+
+1. See [http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/](http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/)
+1. Check permissions on the files
+ 1. To change ownership to root run the command `sudo chown root <filename>`
+ 1. To change permissions run the command `sudo chmod 644 <filename>`
+1. Restart
+1. To confirm the user file limits were changed by running command `ulimit -a`
+
+## TODO
+
+1. Show some of the KVM commands and why you would use them
+1. Show how to run the ASP.NET samples
+1. Show where packages are kept
+1. Try the various ASP.NET Yeoman templates (i.e. controllers, views, etc.)
