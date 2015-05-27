@@ -57,7 +57,7 @@ Yeoman is used to scaffold ASP.NET projects.
 
 To confirm if you have Yeoman installed, run the command `yo --version`.
 
-To install Yeoman, run the command `npm install -g yo`.
+To install Yeoman, run the command `sudo npm install -g yo`.
 
 ### Install the K Version Manager (KVM)
 
