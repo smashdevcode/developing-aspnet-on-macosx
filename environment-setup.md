@@ -3,7 +3,11 @@
 
 ## Opening Acts
 
-### 1) Install Homebrew
+### 1) Install Xcode
+
+Installing Xcode is necessary as Homebrew requires some of the Xcode command line tools.
+
+### 2) Install Homebrew
 
 See [Homebrew](http://brew.sh)
 
@@ -11,21 +15,21 @@ See [Homebrew](http://brew.sh)
 * Install Homebrew by running the command `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * Run commands `brew update` and `brew doctor` immediately after installation completes
 
-### 2) Install Git
+### 3) Install Git
 
 `brew install git`
 
-### 3) Install Node.js
+### 4) Install Node.js
 
 `brew install node`
 
 Verify install with `node -v` and `npm -v`
 
-### 4) Install Mono
+### 5) Install Mono
 
 `brew install mono`
 
-### 5) Install Yeoman
+### 6) Install Yeoman
 
 Yeoman is used to scaffold ASP.NET projects.
 
@@ -33,19 +37,24 @@ To confirm if you have Yeoman installed, run the command `yo --version`.
 
 To install Yeoman, run the command `npm install -g yo`.
 
-### 6) Install Yeoman ASP.NET templates
+### 7) Install Yeoman ASP.NET templates
 
 `npm install -g generator-aspnet`
 
 ## The Headliners
 
-### 7) Install ASP.NET 5
+### 8) Install ASP.NET 5
+
+Before installing ASP.NET 5, make sure that you've got a profile setup (i.e. ~/.bash_profile ~/.zshrc or ~/.profile).
 
 ```
 curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
-dnvm upgrade
-dnvm list
 ```
-### 8) Install VS Code
+
+To install the latest version, run the command `dnvm upgrade`.
+
+To list the installed versions, run the command `dnvm list`.
+
+### 9) Install VS Code
 
 See https://code.visualstudio.com/
