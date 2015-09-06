@@ -1,0 +1,339 @@
+
+ASP.NET 5
+
+
+Setting Up Our Environment
+
+Install Homebrew
+Install Node.js
+Install Yeoman
+Install Yeoman ASP.NET templates
+Install Git (or GitHub?)
+Install VS Code
+Install ASP.NET 5
+
+Do you have to install Mono???
+    I think so... in order to run Kestrel
+
+
+
+
+
+
+
+
+TODO
+
+    Where do packages get stored on the Mac OS X file system?
+        How do you view hidden folders in the finder???
+
+
+
+
+
+    How do you view the list of available versions???
+
+    Why can't I get intellisense to work in VS Code???
+
+
+
+    How do I get detailed error messages to display in the browser?
+        Aha! app.UseErrorPage()
+        http://docs.asp.net/en/latest/fundamentals/diagnostics.html
+
+    Try out Entity Framework 7
+        Test code first work flow against Azure database
+        In memory database???
+            What is this about???
+
+
+Watch ASP.NET Community Standups on YouTube.com
+    8/28 Standup
+        Some great community links
+
+
+
+Roadmap
+    Beta8 is the last beta
+    RC will follow that
+    Currently planning for a November release
+
+
+
+
+
+
+Official Wiki
+    https://github.com/aspnet/Home/wiki
+
+
+
+.NET Core
+    http://blogs.msdn.com/b/cesardelatorre/archive/2014/11/18/what-is-net-core-5-and-asp-net-5-within-net-2015-preview.aspx
+
+ASP.NET 5 Blog Posts
+    http://stephenwalther.com/archive/2015/02/03/asp-net-5-and-angularjs-part-7-running-on-a-mac
+    http://gavindraper.com/2015/05/20/asp-net-5-up-and-running-series/
+    http://gavindraper.com/2015/05/13/asp-net-5-vs-code-and-osx-getting-started/
+    https://open.bekk.no/aspnet5-development-on-osx-with-docker
+    http://www.codeproject.com/Articles/987288/NET-on-Mac-for-the-OS-X-n-b-without-Mono-via-Visua
+    https://medium.com/@jclagache/asp-net-5-met-os-x-c55b6d7af065
+    http://blog.tonysneed.com/2015/05/25/develop-and-deploy-asp-net-5-apps-on-mac-os-x/
+    http://graemechristie.github.io/graemechristie/blog/2014/05/26/asp-dot-net-vnext-on-osx-and-linux/
+    https://msdn.microsoft.com/en-us/magazine/Dn973011.aspx
+
+
+
+Pro Tips
+    Make sure that your versions line up
+        There is a lot of change right now... so mixing and matching versions will often break your apps
+
+
+
+Agenda
+
+1) Install ASP.NET 5
+2) Install VS Code (optional)
+3) Scaffolding an App
+4) ASP.NET Quick Tour
+5) Publishing to Azure Using GitHub Integration
+
+Things to Cover
+
+1) What is .NET Core
+2) What is Kestrel
+3) What are the components of ASP.NET 5 (dnvm, dnu, dnx)
+4) How is the ASP.NET different
+
+
+
+Managing Versions
+
+List of dnx versions
+    https://github.com/aspnet/dnx/releases
+
+To install a different version
+    dnvm install 1.0.0-beta7
+
+Switch to a different version
+    dnvm use 1.0.0-beta7
+    dnvm use 1.0.0-beta7 -r coreclr
+
+To change your default version
+    dnvm use 1.0.0-beta7 -p
+
+Note: When using coreclr you cannot build using the .NET 4.5.1 target
+
+"frameworks": {
+  "dnx451": {},
+  "dnxcore50": {}
+},
+
+
+
+
+Diagnostics
+
+To view the runtime information...
+    app.UseRuntimeInfoPage();
+    http://localhost:5000/runtimeinfo
+    Shows where the packages are being loaded from
+
+
+
+
+
+
+
+Install ASP.NET on Mac OS X
+http://docs.asp.net/en/latest/getting-started/installing-on-mac.html
+
+
+
+
+
+ASP.NET Site
+http://www.asp.net/vnext/overview/aspnet-vnext
+
+VS Code and ASP.NET 5
+https://code.visualstudio.com/Docs/runtimes/aspnet5
+http://docs.asp.net/en/latest/tutorials/your-first-mac-aspnet.html
+https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-app-using-vscode/
+https://azure.microsoft.com/en-us/documentation/articles/app-service-create-aspnet-api-app-using-vscode/
+http://blog.falafel.com/build-asp-net-apps-with-visual-studio-code-on-windows-or-mac/
+
+
+
+BUILD 2015 - Introducing ASP.NET 5
+
+
+
+
+
+
+
+BUILD 2015 - ASP.NET Deep Dive
+
+Command Line Tools
+    dnvm - Version manager
+    dnx - Execute app
+    dnu - Everything else
+
+project.json - commands
+    Defines the entry point(s) for your app
+    "web" - References Microsoft.AspNet.Hosting looks for Startup class in your project
+
+DI
+    Now baked into the platform
+    IApplicationEnvironment is an example of a dnx type that you can ask for in the Startup class
+    You can inject into Controllers, Views, and Tag Helpers
+    ILoggerFactory is an new logging mechanism that is available to inject into your Controllers
+
+global.json
+    You can add additional source code paths to this configuration file
+    dnx will then attempt to load your dependencies from that path
+
+Class Library (Project)
+    dnx project without wwwroot folder
+    Produces a Nuget package
+    You can still just add it to a web project by adding a reference
+    You can build your project against multiple frameworks
+        You no longer need to link files into separate projects
+    You get a target combo box to select the framework
+        You'll only see compilation errors for the selected framework
+        VS Code will actually show you errors for all of your target frameworks
+    dnx builds from source so by default you get any output from a Class Library project
+        Go to the project defaults to enable output
+        Creates a Nuget Package
+            You can use Nuget Package Explorer to view the contents of the package
+            Within the package are the .dlls
+                Stored within TFM (Target Framework Moniker) folders
+    "dnu build" - builds the project
+    "dnu pack" - creates the package
+
+Tag Helpers
+    Can be kept anywhere in your project
+    You just need to implement an interface (or inherit from a base class)
+    The interface just has two members
+        Order property
+        ProcessAsync() method
+    The name of the Tag Helper class is important
+        "RepeatTagHelper" results in a Tag Helper element named "repeat"
+    The Tag Helper can be an element or attached to existing elements as an attribute
+    Tag Helpers need to be declared in the _GlobalImport.cshtml view
+        _ViewStart.cshtml contains all of your global imperative code
+        _GlobalImport.cshtml contains all of your declarative statements
+    In Razor, Tag Helper element attribute values are C# code
+
+Commands
+    Start with a dnx Console App project
+    Publish to a Nuget package
+    Allows that Nuget package to be installed by others
+    Once installed that command is now available globally from the command line
+
+
+
+
+
+
+
+Pluralsight Course Notes
+
+The Big Three Changes
+
+New Project System
+    File based project system
+        No project file
+        No longer need to manage merge conflicts in .csproj
+    Dynamic compilation
+    New default folder structure
+
+Cloud Optimized Core CLR
+    Fast and lean runtime for the server
+    CLR wrapped in a NuGet package
+    Runs outside of Windows
+
+Unification
+    MVC 6 == ASP.NET MVC + Web API
+    Less overhead, less duplication
+    No System.Web
+
+Walkthrough
+
+Show how adding files to the file system adds files to your project
+Show that you can add a .cs file through the file system and it will dynamically compile into the app
+Models, controllers, views, Razor, etc. are all still here
+The root of the website is no longer the root of the project
+    wwwroot is the root of the site
+    Contains all of the static content for the site (CSS and JS)
+    Views are not contained in wwwroot because they are compiled
+No web.config file
+No Global.asax(.cs) file
+
+Project Dependencies
+    Specified using the project.json file
+    NuGet package manager is no longer a dialog (yay!)
+    You can also just edit the project.json file (with Intellisense)
+    Packages are no longer stored in a "packages" Solution folder
+        See the .kpm folder under your user folder
+    The References folder in the Solution Explorer provides a nice visual dislay of your dependencies
+
+ASP.NET 5 vs ASP.NET 5 Core
+    Full .NET framework vs core framework
+    Core framework is ~1/10 of the size... so stuff is missing
+    List of frameworks is listed in the project.json file
+        The project will be compiled for every framework listed
+    Intellisense will tell you what properties and methods are not available in the Core framework
+    Can use "#if" directives to provide code for specific frameworks
+        ASPNET50 vs ASPNETCORE50
+    Project Properties dialog allows you to specify your runtime
+    Runtime .dlls are stored in the .kre folder under your user folder
+
+kre - "k" runtime environment
+    Loads your application into the app domain
+    Project settings allows you to specify which target to use when debugging
+    The Core CLR is stored in the /Users/bitmask/kre folder
+    NuGet packages are stored in the /Users/bitmask/kpm folder
+
+Class Libraries
+    Uses the same compilation model as the web application project
+    global.json "sources" property specifies where source code can be found
+    The project.json dependencies can reference class libraries
+        ASP.NET will always look in the source and test folders for projects that match the dependency name
+
+Startup and Middleware
+    Startup class is the entry point
+    Used to configure the application
+    You can use app.Run() to write content to the context
+    You can use app.UseWelcomePage() to display generic welcome page
+
+Startup and MVC Services
+    Add the Microsoft.AspNet.Mvc package
+    Two phase startup... ConfigureServices(IServiceCollection) and Configure(IApplicationBuilder)
+        services.AddMvc();
+        app.UseMvc();
+    Add a Home controller with an Index() method and you're good to go
+    Customizing a route is easy
+        app.UseMvc(routes => routes.MapRoute("default", "{controller=Home}/{action=Default}"));
+    Attribute based routing is also still available with some minor improvements
+        [Route("/[controller]")] or [Route("/[action]")]
+
+Injecting Services
+    Configure services on the DI container using the services.AddInstance<>() method
+        Alternative method is AddSingleton()
+    AddScoped() is per request instance
+    AddTransient() is per call instance
+
+Working with Configuration
+    Add a config.json file to the root of the project
+    Add the Microsoft.Framework.ConfigurationModel.Json package
+    Configuration = new Configuration()
+        .AddJsonFile("config.json")
+        .AddEnvironmentVariables();
+
+Web API Controllers
+    Same base controller type as standard MVC controllers
+    "Accept" header can be used to indicate what content type you want
+
+KVM
+    TODO
