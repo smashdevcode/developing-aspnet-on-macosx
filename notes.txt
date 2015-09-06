@@ -44,6 +44,10 @@ TODO
 
 
 
+    Work through and rehearse installing components
+        Intermingle with slides???
+        Or just talk through what things are???
+
     How do you view the list of available versions???
 
     Why can't I get intellisense to work in VS Code???
