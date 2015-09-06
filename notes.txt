@@ -43,7 +43,7 @@ TODO
             What is this about???
         Using SQLite???
             Does a basic scenario work yet???
-
+        DB Browser for SQLite - http://sqlitebrowser.org
 
 
 Watch ASP.NET Community Standups on YouTube.com
