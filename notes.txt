@@ -79,7 +79,8 @@ Things to Cover
 2) What is Kestrel
 3) What are the components of ASP.NET 5 (dnvm, dnu, dnx)
 4) How is the ASP.NET different
-
+5) Entity Framework 7 and OS X Database Options
+6) Tag Helpers
 
 
 
