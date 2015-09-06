@@ -8,7 +8,7 @@ Install Homebrew
 Install Node.js
 Install Yeoman
 Install Yeoman ASP.NET templates
-Install Git (or GitHub?)
+Install Git - `brew install git`
 Install VS Code
 Install ASP.NET 5
 
@@ -23,12 +23,6 @@ Do you have to install Mono???
 
 
 TODO
-
-    Where do packages get stored on the Mac OS X file system?
-        How do you view hidden folders in the finder???
-
-
-
 
 
     How do you view the list of available versions???
@@ -53,10 +47,6 @@ Watch ASP.NET Community Standups on YouTube.com
 
 
 
-Roadmap
-    Beta8 is the last beta
-    RC will follow that
-    Currently planning for a November release
 
 
 
@@ -128,6 +118,24 @@ Note: When using coreclr you cannot build using the .NET 4.5.1 target
   "dnx451": {},
   "dnxcore50": {}
 },
+
+
+Limitations of .NET Core
+
+Cryptography: Some of the System.Security.Cryptography.X509Certificates library is not yet implemented.
+Networking: Most of the networking libraries are not yet available. System.Net.Primitives and System.Net.NameResolution are only partially functional and System.Net.Http works only for common success scenarios.
+I/O: Paths up to the system-supported max path length are allowed, except for a few situations related to loading applications, assemblies, and resources.
+Globalization: Culture is assumed to be invariant and string operations related to sorting and searching assume ASCII.
+Data: SqlClient is not currently functional.
+
+Runtimes and Packages Location
+    Stored in {user directory}/.dnx
+
+Roadmap
+    Beta8 is the last beta
+    RC will follow that
+    Currently planning for a November release
+
 
 
 
