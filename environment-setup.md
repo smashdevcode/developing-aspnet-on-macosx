@@ -55,6 +55,12 @@ To install the latest version, run the command `dnvm upgrade`.
 
 To list the installed versions, run the command `dnvm list`.
 
+To install the Core CLR version of the runtime, run the command `dnvm install 1.0.0-beta7 -r coreclr`.
+
+To switch to the Core CLR version of the runtime, run the command `dnvm use 1.0.0-beta7 -r coreclr`.
+
+To change your default version of the runtime, run the command `dnvm use 1.0.0-beta7 -r coreclr -p`.
+
 ### 9) Install VS Code
 
 See https://code.visualstudio.com/
