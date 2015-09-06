@@ -117,7 +117,7 @@ The BCL layer we’ll have a 1-to-1 relationship between assemblies and NuGet pa
 
 ASP.NET 5
 
-Unified framework targeting MVC, Web API and SignalR, all of them in a single framework
+Unified framework targeting MVC, Web API and SignalR (delayed until Spring 2016), all of them in a single framework
 Seamless and “by default” integration with Microsoft Azure and Windows Server through simplified configuration
 Rich ecosystem of composable NuGet packages
 End to end decoupled stack (ASP.NET and .NET) based on Dependency Injection provided out-of-the-box
