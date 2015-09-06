@@ -6,9 +6,9 @@ Setting Up Our Environment
 
 Install Homebrew
 Install Node.js
+Install Git - `brew install git`
 Install Yeoman
 Install Yeoman ASP.NET templates
-Install Git - `brew install git`
 Install VS Code
 Install ASP.NET 5
 
