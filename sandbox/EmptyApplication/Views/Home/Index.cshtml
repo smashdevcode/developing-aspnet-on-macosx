@@ -1,2 +1,18 @@
+@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+
+<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
+<script asp-src-include="~/scripts/**/*.js"></script>
+<script asp-src-include="~/scripts/test1.js" asp-append-version="true"></script>
 
 <h1>Hello from a view!</h1>
+
+<img src="~/images/logo.png"
+     alt="company logo"
+     asp-append-version="true" />
+
+<ul>
+@foreach (var record in ViewBag.Data)
+{
+    <li>@record.Name</li>
+}
+</ul>

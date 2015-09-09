@@ -51,6 +51,14 @@ Before installing ASP.NET 5, make sure that you've got a profile setup (i.e. ~/.
 curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
 ```
 
+Or using Homebrew...
+
+```
+brew tap aspnet/dnx
+brew update
+brew install dnvm
+```
+
 To install the latest version, run the command `dnvm upgrade`.
 
 To list the installed versions, run the command `dnvm list`.
