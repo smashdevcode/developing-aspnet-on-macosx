@@ -21,10 +21,10 @@ Preparation
 
 1. DONE Install Mac OS X on external drive
 1. DONE Install Yosemite update
-1. Install Xcode, TextExpander, sqlitebrowser, Chrome
-1. Setup SSH keys
-1. Setup .bash_profile
-1. Download presentation slides and PDF
+1. DONE Install Xcode, TextExpander, sqlitebrowser, Chrome
+1. DONE Setup SSH keys
+1. DONE Setup .bash_profile
+1. DONE Download presentation slides and PDF
 1. Make copy of the partition
 1. Setup GitHub repo
 1. Setup Azure Web App
