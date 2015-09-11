@@ -10,312 +10,85 @@ TODO
 
 
 
-Make OS X VM
-    DONE Make sure that the OS is fully updated
-    DONE Install Xcode
-    Format and partition my external hard drive
-        100GB for native install???
-        400GB for VMs???
-    Make a copy of the VM
-    Practice environment setup
 
+!!! Put together intro and closing slides
 
+!!! Setup code snippets
+    Mark each section with a prefix code
 
-
-Test deploying to Azure
-
-    Just use GitHub integration???
-        http://blog.dudak.me/2015/deploying-asp-net-5-application-to-azure-web-app-using-git-or-mercurial/
-
-    Is this really necessary??? Doesn't appear to be...
-        https://msdn.microsoft.com/en-us/Library/vs/alm/Build/azure/deploy-aspnet5
-
-    https://github.com/aspnet/Home/wiki/Deploy-an-AspNet-vNext-application-to-Microsoft-Azure-websites
-
-
-
-
-Do more testing with EF7
-
-
-
-Entity Framework 7
-
-    Now works with SQLite
-
-    Steps to setup
-
-        1) Add dependencies
-            "EntityFramework.SQLite": "7.0.0-beta7"
-            "EntityFramework.Commands": "7.0.0-beta7"
-
-        2) Add command
-            "ef": "EntityFramework.Commands"
-
-
-
-
-    Tools to browse your database
-        Firefox Add-On SQLite Manager
-            https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/
-        DB Browser for SQLite
-            http://sqlitebrowser.org
-
-
-
-
-
-    SQLite blog post
-        https://damienbod.wordpress.com/2015/08/30/asp-net-5-with-sqlite-and-entity-framework-7/
-
-    Create semi-interesting set of model classes
-        1:many
-        many:many
-        1:1
-        Other???
-
-    SQLite is available on OS X (part of the default installation)
-        What schema options aren't available???
-
-    PostgreSQL provider is under development
-        http://www.npgsql.org/doc/ef7.html
-        http://www.postgresql.org/download/macosx/
-
-    Working with the in-memory database
-        Does this work as well???
-
-    Can you connect to a remote database (i.e. in Azure)???
-
-    Try out Entity Framework 7
-        Test code first work flow against Azure database
-        In memory database???
-            What is this about???
-        Using SQLite???
-            Does a basic scenario work yet???
-        DB Browser for SQLite - http://sqlitebrowser.org
-
-
-
-
-
-Specifying Source Paths
+!!! Specifying Source Paths
     Try out loading MVC from source
         Add code path to global.json
 
+!!! Work through and rehearse installing components
+    How long does each step take over the MiFi???
+    Intermingle with slides???
+    Or just talk through what things are???
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Play around with Tag Helpers
-
-    Setup Bootstrap Tag Helpers NuGet package???
-
-    Update on Tag Helpers
-        https://channel9.msdn.com/Shows/Web+Camps+TV/Update-on-TagHelpers-with-Taylor-Mullen
-
-    Setting up custom Tag Helpers
-        http://www.davepaquette.com/archive/2015/06/22/creating-custom-mvc-6-tag-helpers.aspx
-
-
-    Enabling tag helpers
-        @addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
-
-    Form Tag Helpers
-        http://www.davepaquette.com/archive/2015/05/11/cleaner-forms-using-tag-helpers-in-mvc6.aspx
-        Input
-            http://www.davepaquette.com/archive/2015/05/13/mvc6-input-tag-helper-deep-dive.aspx
-        Text Area
-            http://www.davepaquette.com/archive/2015/05/18/mvc-6-textarea-tag-helper.aspx
-        Validation
-            http://www.davepaquette.com/archive/2015/05/14/mvc6-validation-tag-helpers-deep-dive.aspx
-        Label
-            http://www.davepaquette.com/archive/2015/05/18/mvc-6-label-tag-helper.aspx
-        Select
-            http://www.davepaquette.com/archive/2015/05/18/mvc6-select-tag-helper.aspx
-        Form
-            http://www.davepaquette.com/archive/2015/05/18/mvc-6-form-tag-helper.aspx
-
-    Anchor
-        http://www.davepaquette.com/archive/2015/06/01/mvc-6-anchor-tag-helper.aspx
-
-    Link and Script Tag Helpers
-        Globbing
-        Cache Busting
-        http://www.davepaquette.com/archive/2015/05/06/link-and-script-tag-helpers-in-mvc6.aspx
-
-    Image Tag Helper
-        Cache Busting
-        http://www.davepaquette.com/archive/2015/07/01/mvc-6-image-tag-helper.aspx
-
-    Cache
-        http://www.davepaquette.com/archive/2015/06/03/mvc-6-cache-tag-helper.aspx
-
-    Environment
-        http://www.davepaquette.com/archive/2015/05/05/web-optimization-development-and-production-in-asp-net-mvc6.aspx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Review basic web app Yeoman template
-    There's some interesting stuff going on in the Startup.cs file
-    Update my presentation notes
-
-    Things to cover
-
-        How to do configuration
-            With JSON files
-            Adding environment variables
-
-        What exactly does calling AddWebApiConventions() do???
-            Also see the Microsoft.AspNet.Mvc.WebApiCompatShim package for clues
-
-        Explore how the logger works
-            ILoggerFactory loggerFactory
-            loggerFactory.MinimumLevel = LogLevel.Information;
-            loggerFactory.AddConsole();
-            loggerFactory.AddDebug();
-
-        Error handling and pages
-            // Add the following to the request pipeline only in development environment.
-            if (env.IsDevelopment())
-            {
-                app.UseErrorPage();
-            }
-            else
-            {
-                // Add Error handling middleware which catches all application specific errors and
-                // send the request to the following path or controller action.
-                app.UseErrorHandler("/Home/Error");
-            }
-
-        Static file handling
-            app.UseStaticFiles();
-
-
-
-Managing client packages
-
-    Do you need Gulp or Grunt to be installed???
-
-    Using Gulp
-        http://go.microsoft.com/fwlink/?LinkID=517849
-
-    Install Bower as part of my setup???
-
-    Play around with using bower or npm to load Knockout (or Bootstrap, or ???)
-        Hook into project.json scripts element to call "bower install" or "npm install" to ensure that the appropriate packages are restored
-
-    Play around with using gulp to catenate and minify scripts???
-
-
-
-
-What is the difference between the project.json "exclude" and "publishExclude" elements???
-
-
+Read research notes
+    Anything worth adding in???
 
 Prepare plan if I don't have internet connectivity
     Have local app (or VM) that has a project with all of the necessary dependencies installed
     Prepare slides that walks through the environment setup steps
     Prepare slides that shows how the deployment to Azure works???
 
+Play around further Tag Helpers
+    Setup Bootstrap Tag Helpers NuGet package???
+    Update on Tag Helpers
+        https://channel9.msdn.com/Shows/Web+Camps+TV/Update-on-TagHelpers-with-Taylor-Mullen
+
+Managing client packages
+    Do you need Gulp or Grunt to be installed???
+    Using Gulp
+        http://go.microsoft.com/fwlink/?LinkID=517849
+    Install Bower as part of my setup???
+    Play around with using bower or npm to load Knockout (or Bootstrap, or ???)
+        Hook into project.json scripts element to call "bower install" or "npm install" to ensure that the appropriate packages are restored
+    Play around with using gulp to catenate and minify scripts???
+
+Do more testing with EF7
+    Can you connect to a remote database (i.e. in Azure)???
+    Create semi-interesting set of model classes
+        1:many
+        many:many
+        1:1
+        Other???
+    Working with the in-memory database
+        Does this work as well???
 
 
-Work through and rehearse installing components
-    Intermingle with slides???
-    Or just talk through what things are???
 
-How do I get detailed error messages to display in the browser?
-    Aha! app.UseErrorPage()
-    http://docs.asp.net/en/latest/fundamentals/diagnostics.html
+
+
+
+
+Read up on DNX
+    http://docs.asp.net/en/latest/dnx/overview.html
+    http://blogs.msdn.com/b/mvpawardprogram/archive/2015/06/18/demystifying-pcls-net-core-dnx-and-uwp-redux.aspx
+    What are the command line options???
+
+Read up on DNU
+    What all does it do???
+    What are the command options???
 
 Ability to add Browser Link???
     app.UseBrowserLink();
     Does this work on OS X???
 
-Figure out why I wasn't able to compile dnxcore with the mono runtime selected
-    Well... it could compile but it couldn't run
-    Is this a hint as to why OmniSharp is failing???
-
-Web Optimization
-    http://www.davepaquette.com/archive/2015/05/05/web-optimization-development-and-production-in-asp-net-mvc6.aspx
 
 
-
-Watch ASP.NET Community Standups on YouTube.com
-    8/28 Standup
-        Some great community links
-
-
-
-
-
-
-
-
-
-
-Pro Tips
-    Make sure that your versions line up
-        There is a lot of change right now... so mixing and matching versions will often break your apps
-
-
-
-Agenda
-
-1) Install ASP.NET 5
-2) Install VS Code (optional)
-3) Scaffolding an App
-4) ASP.NET Quick Tour
-5) Publishing to Azure Using GitHub Integration
-
-Things to Cover
-
-1) What is .NET Core
-2) What is Kestrel
-3) What are the components of ASP.NET 5 (dnvm, dnu, dnx)
-4) How is the ASP.NET different
-5) Entity Framework 7 and OS X Database Options
-6) Tag Helpers
-
-Other Ideas
-
-POCO controllers
-With Controller base class
-Web API controller
-One API for filters, etc.
-DI everywhere
 
 
 
 
 .NET 2015
+///////////////////////////////////////////////////////
 
 Encompasses both .NET Framework 4.6 and .NET Core 5
 .NET Framework 4.6
@@ -352,29 +125,6 @@ Seamless and “by default” integration with Microsoft Azure and Windows Serve
 Rich ecosystem of composable NuGet packages
 End to end decoupled stack (ASP.NET and .NET) based on Dependency Injection provided out-of-the-box
 
-Managing Versions
-
-List of dnx versions
-    https://github.com/aspnet/dnx/releases
-
-To install a different version
-    dnvm install 1.0.0-beta7
-
-Switch to a different version
-    dnvm use 1.0.0-beta7
-    dnvm use 1.0.0-beta7 -r coreclr
-
-To change your default version
-    dnvm use 1.0.0-beta7 -p
-
-Note: When using coreclr you cannot build using the .NET 4.5.1 target
-
-"frameworks": {
-  "dnx451": {},
-  "dnxcore50": {}
-},
-
-
 Limitations of .NET Core
 
 Cryptography: Some of the System.Security.Cryptography.X509Certificates library is not yet implemented.
@@ -383,127 +133,17 @@ I/O: Paths up to the system-supported max path length are allowed, except for a 
 Globalization: Culture is assumed to be invariant and string operations related to sorting and searching assume ASCII.
 Data: SqlClient is not currently functional.
 
-Runtimes and Packages Location
-    Stored in {user directory}/.dnx
-
-Roadmap
-    Beta8 is the last beta
-    RC will follow that
-    Currently planning for a November release
-
-Kestrel
-    Based on libuv
-
-Diagnostics
-    To view the runtime information...
-        app.UseRuntimeInfoPage();
-        http://localhost:5000/runtimeinfo
-        Shows where the packages are being loaded from
-
-Kestrel and nginx
-    nginx can be used as a reserve proxy to forward requests to Kestrel
-    See http://druss.co/2015/06/asp-net-5-kestrel-nginx-web-server-on-linux/
-
-Entity Framework 7
-    Designed as a set of smaller, composable APIs that can be mixed and matched based on the feature set you need
-
-
-
-Explain wwwroot
-    http://go.microsoft.com/fwlink/?LinkId=518008
-
-
-
-Reverse Package Search
-    https://packagesearch.azurewebsites.net/
-
-New project system
-    You can now just work with the file system
-
-Serving Static Files
-    TODO
-
-Configuration
-    Configuration = new Configuration()
-      .AddJsonFile("config.json")
-      .AddEnvironmentVariables();
-    public IConfiguration Configuration { get; set; }
-
-
-
-
-The Story Around Databases
-    SQLite is available on OS X (part of the default installation)
-        What schema options aren't available???
-    PostgreSQL provider is under development
-        http://www.npgsql.org/doc/ef7.html
-        http://www.postgresql.org/download/macosx/
-    Working with the in-memory database
-        Does this work as well???
-    Can you connect to a remote database (i.e. in Azure)???
-
-_ViewImports vs _ViewStart
-    _ViewStart.cshtml contains all of your global imperative code
-    _ViewImports.cshtml contains all of your declarative statements
-
-Fixing Live Reload
-    Visual Studio proper provides this experience out of the box
-    On OS X, you have to do a little extra work to get it to work
-    John Papa provided a bash script for this purpose
-        https://github.com/johnpapa/aspnet5-starter-demo#dnxmon
-    Needed to update to support recent changes to dnx
-    kmon was also an attempt to fix this
-        https://github.com/henriksen/kmon
-
-Intellisense in Visual Studio Code
-    Uses OmniSharp for statement completion
-    Current public version 0.7.0 doesn't work with Beta7
-    Insiders preview version 0.8.0 fixes the problem
-        OmniSharp is bundled with the editor (at least for now)
-        Updating the editor is necessary to update OmniSharp
-
-
-
-
-
-Show the app running on Windows at the end of the presentation???
-
-
-
-
-Install ASP.NET on Mac OS X
-http://docs.asp.net/en/latest/getting-started/installing-on-mac.html
-
-
-
-
-
-
-
-Configuring Mac OS X for the Visual Studio Code Insiders Auto-Update
-    1. Close Code if it is still running.
-    2. Start the Terminal app.
-    3. Type cd ~/Library/"Application Support"/Code
-    4. Type nano storage.json
-    5. Replace "updateChannel": "stable" with "updateChannel": "insiders"
-    6. Save the file and exit via Ctrl-X.
-    7. Code will now auto-update once the update is released (targeted for early next week).
-
-
-
-
-
 
 
 BUILD 2015 - Introducing ASP.NET 5
+///////////////////////////////////////////////////////
 
-
-
-
+TODO
 
 
 
 BUILD 2015 - ASP.NET Deep Dive
+///////////////////////////////////////////////////////
 
 Command Line Tools
     dnvm - Version manager
@@ -563,12 +203,8 @@ Commands
     Once installed that command is now available globally from the command line
 
 
-
-
-
-
-
 Pluralsight Course Notes
+///////////////////////////////////////////////////////
 
 The Big Three Changes
 
