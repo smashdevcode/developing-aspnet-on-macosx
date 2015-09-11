@@ -4,16 +4,15 @@
 TODO
 
 1. Print out demo outline and code snippet prompts
+1. Update database example with simple submission form???
+1. Update database example with SQL Server option (to cover the deployment to Azure)
+1. Work through Tag Helper content
 1. Update old README file
 1. Keep external partition that has all of the NuGet packages cached
 1. Check in code snippets into the presentation repo
 
 Questions
 
-1. Setting up the git SSH keys was really painful...
- 1. How can I avoid that??? Install the GitHub client??? Other???
-1. Getting my .bash_profile setup was also a miss
- 1. Put that onto the VM ahead of time
 1. Put my presentation notes on my Surface so that I can reference that during my presentation???
     Is there a way to disable power save so that the tablet will stay on???
 
@@ -231,6 +230,22 @@ https://packagesearch.azurewebsites.net/
 
 To view the runtime information...
 
+Add the following dependency to the project:
+
+Snippet d1
+
+```
+"Microsoft.AspNet.Diagnostics": "1.0.0-beta7"
+```
+
+Add the following using statement:
+
+```
+TODO???
+```
+
+Snippet d2
+
 `app.UseRuntimeInfoPage();`
 
 http://localhost:5000/runtimeinfo
@@ -241,11 +256,15 @@ Runtimes and packages are located at `{user directory}/.dnx`.
 
 To see detailed error information...
 
+Snippet e1
+
 ```
 app.UseErrorPage();
 ```
 
 A more sophisticated approach...
+
+Snippet e2
 
 ```
 // Add the following to the request pipeline only in development environment.
@@ -270,11 +289,15 @@ else
 
 Add the following dependency:
 
+Snippet sf1
+
 ```
 "Microsoft.AspNet.StaticFiles": "1.0.0-beta7"
 ```
 
 Then add the following to `Startup.Configure` method:
+
+Snippet sf2
 
 ```
 app.UseStaticFiles();
@@ -291,15 +314,32 @@ app.UseFileServer();
 
 Add the following dependency:
 
+Snippet mvc1
+
 ```
 "Microsoft.AspNet.Mvc": "6.0.0-beta7"
 ```
 
 Then update the `Startup` class as follows:
 
-1. Add `using Microsoft.AspNet.Mvc` statement
-1. Add `services.AddMvc();` to the `ConfigureServices` method
-1. Add `app.UseMvcWithDefaultRoute();` to the `Configure` method
+1. Add `using Microsoft.AspNet.Mvc;` statement - Snippet mvc2
+1. Add `services.AddMvc();` to the `ConfigureServices` method - Snippet mvc3
+1. Add `app.UseMvcWithDefaultRoute();` to the `Configure` method - Snippet mvc4
+
+You can also explicity provide your routes:
+
+```
+// Add MVC to the request pipeline.
+app.UseMvc(routes =>
+{
+    routes.MapRoute(
+        name: "default",
+        template: "{controller=Home}/{action=Index}/{id?}");
+
+    // Uncomment the following line to add a route for porting Web API 2 controllers.
+    // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
+});
+```
 
 Then add a POCO controller to the project.
 
@@ -325,17 +365,19 @@ PostgreSQL provider is under development
 
 Steps to setup using SQLite
 
-1) Add dependencies
+1) Add dependencies - Snippet ef1
     "EntityFramework.SQLite": "7.0.0-beta7",
     "EntityFramework.Commands": "7.0.0-beta7",
     "Microsoft.Framework.Configuration.Json": "1.0.0-beta7"
-2) Add command
+2) Add command - Snippet ef2
     "ef": "EntityFramework.Commands"
-3) Add model, context, and repository
-4) Update the Startup.cs file
-    a) Add configuration
-    b) Configure context
-5) Update a controller and view
+3) Add model, context, and repository - Snippets ef3, ef4, ef5, ef6
+4) Add config.json file - Snippet ef7
+5) Update the Startup.cs file
+    a) Add using statements - Snippet ef8
+    a) Add configuration - Snippet ef9
+    b) Configure context - Snippet ef10
+6) Update a controller and view
 
 Tools to browse your database
 

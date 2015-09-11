@@ -5,36 +5,26 @@ using EmptyApplication.Models;
 
 public class HomeController : Controller
 {
-	private IDataEventRecordResporitory _repository;
-	
-	public HomeController(IDataEventRecordResporitory repository)
+	private IRespository _repository;
+
+	public HomeController(IRespository repository)
 	{
 		_repository = repository;
-	}	
-	
+	}
+
 	public IActionResult Index()
 	{
-		_repository.Post(new DataEventRecord()
+		_repository.Post(new Record()
 		{
 			Name = "Test Record",
 			Description = "Another test record.",
 			Timestamp = DateTime.Now
 		});
-		
+
 		var data = _repository.GetAll();
-		
+
 		ViewBag.Data = data;
-		
+
 		return View();
 	}
-
-	public string Second()
-	{
-		return "Hello from Second!";
-	}
-
-	//  public IActionResult Second()
-	//  {
-	//  	return View();
-	//  }
 }

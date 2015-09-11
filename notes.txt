@@ -11,8 +11,6 @@ TODO
 
 
 
-!!! Put together intro and closing slides
-
 !!! Setup code snippets
     Mark each section with a prefix code
 

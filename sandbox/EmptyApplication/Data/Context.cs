@@ -3,19 +3,19 @@ using EmptyApplication.Models;
 
 namespace EmptyApplication.Data
 {
-	public class DataEventRecordContext : DbContext
+	public class Context : DbContext
 	{
-		public DbSet<DataEventRecord> DataEventRecords { get; set; }
-		
-		public DataEventRecordContext()
+		public DbSet<Record> Records { get; set; }
+
+		public Context()
 		{
 			Database.EnsureCreated();
 		}
-		
+
 		protected override void OnModelCreating(ModelBuilder builder)
-		{ 
-			builder.Entity<DataEventRecord>().Key(m => m.Id); 
-			base.OnModelCreating(builder); 
-		} 
+		{
+			builder.Entity<Record>().Key(m => m.Id);
+			base.OnModelCreating(builder);
+		}
 	}
 }
