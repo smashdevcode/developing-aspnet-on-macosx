@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>0</integer>
+		<key>groupName</key>
+		<string>Presentation</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>d1</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:02:25Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:04:27Z</date>
+			<key>plainText</key>
+			<string>"Microsoft.AspNet.Diagnostics": "1.0.0-beta7"</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>A518FDF1-15FE-4B56-B35C-0431E09A7493</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>d2</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:06:08Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:06:13Z</date>
+			<key>plainText</key>
+			<string>app.UseRuntimeInfoPage();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>BD23073D-7134-496B-B1A1-1DAA23AFE7C4</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>error1</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:07:25Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:42:39Z</date>
+			<key>plainText</key>
+			<string>app.UseErrorPage();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>871494CE-95C6-440F-8093-455BF359F23B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>error2</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:07:57Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:42:34Z</date>
+			<key>plainText</key>
+			<string>// Add the following to the request pipeline only in development environment.
+if (env.IsDevelopment())
+{
+    app.UseErrorPage();
+}
+else
+{
+    // Add Error handling middleware which catches all application specific errors and
+    // send the request to the following path or controller action.
+    app.UseErrorHandler("/Home/Error");
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>0DFF2228-1235-4F81-B545-FEBCD03BFE0F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>staticfiles1</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:08:36Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:42:46Z</date>
+			<key>plainText</key>
+			<string>"Microsoft.AspNet.StaticFiles": "1.0.0-beta7"</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>EDA99621-5C97-42F7-AA2A-BD7EB09184D7</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>staticfiles2</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:09:05Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:42:52Z</date>
+			<key>plainText</key>
+			<string>app.UseStaticFiles();
+app.UseDefaultFiles();
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>094E2261-AEEE-4ACD-B2F3-78681B8D5EAE</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mvcdepend</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:09:33Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:43:01Z</date>
+			<key>plainText</key>
+			<string>"Microsoft.AspNet.Mvc": "6.0.0-beta7"</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4CB994E8-21D4-4BC1-A076-D100B351AE45</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mvcusing</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:10:09Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:43:10Z</date>
+			<key>plainText</key>
+			<string>using Microsoft.AspNet.Mvc;</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C128CC8F-9AA3-4FF5-A636-E74E1F16EC4F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mvcservice</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:10:41Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:43:14Z</date>
+			<key>plainText</key>
+			<string>services.AddMvc();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B0A94DA8-70B0-4FC5-B90E-76613758776E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mvcdefaultroute</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:11:03Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:44:16Z</date>
+			<key>plainText</key>
+			<string>app.UseMvcWithDefaultRoute();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>9BCC4D7E-C9FA-4924-BF87-F7562E3C114D</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mvcroute</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:11:58Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:44:10Z</date>
+			<key>plainText</key>
+			<string>            // Add MVC to the request pipeline.
+            app.UseMvc(routes =&gt;
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                // Uncomment the following line to add a route for porting Web API 2 controllers.
+                // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
+            });
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>BBBF9DA7-6103-4FD4-B079-1EB664063170</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efdepend</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:23:08Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:43:05Z</date>
+			<key>plainText</key>
+			<string>"EntityFramework.SQLite": "7.0.0-beta7",
+"EntityFramework.Commands": "7.0.0-beta7",
+"Microsoft.Framework.Configuration.Json": "1.0.0-beta7"</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>119F7B35-12BF-4913-85D3-DCA5A8572B8A</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efcommand</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:23:29Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:38:42Z</date>
+			<key>plainText</key>
+			<string>"ef": "EntityFramework.Commands"</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>5300BCE4-AC7F-4402-8D22-D20150096CF6</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efmodel</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:24:00Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:38:46Z</date>
+			<key>plainText</key>
+			<string>using System;
+
+namespace EmptyApplication.Models
+{
+    public class Record
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Timestamp { get; set; }
+    }    
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C18775B9-1267-4527-A36A-1E91D55874E0</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efcontext</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:24:30Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:38:51Z</date>
+			<key>plainText</key>
+			<string>using Microsoft.Data.Entity;
+using EmptyApplication.Models;
+
+namespace EmptyApplication.Data
+{
+	public class Context : DbContext
+	{
+		public DbSet&lt;Record&gt; Records { get; set; }
+		
+		public Context()
+		{
+			Database.EnsureCreated();
+		}
+		
+		protected override void OnModelCreating(ModelBuilder builder)
+		{ 
+			builder.Entity&lt;Record&gt;().Key(m =&gt; m.Id); 
+			base.OnModelCreating(builder); 
+		} 
+	}
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B60A0F9C-36D6-4B0B-B163-F1474A66DDA1</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efirepository</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:24:44Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:38:59Z</date>
+			<key>plainText</key>
+			<string>using System.Collections.Generic;
+using EmptyApplication.Models;
+
+namespace EmptyApplication.Data
+{
+	public interface IRespository
+	{
+		void Delete(int id);
+		Record Get(int id);
+		List&lt;Record&gt; GetAll();
+		void Post(Record record);
+		void Put(int id, Record record);
+	}
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B3024B0F-3619-4445-84CF-A904583CB383</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efrepository</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:25:51Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:39:04Z</date>
+			<key>plainText</key>
+			<string>using System.Collections.Generic;
+using EmptyApplication.Models;
+using Microsoft.Framework.Logging;
+using System.Linq;
+
+namespace EmptyApplication.Data
+{
+	public class Respository : IRespository
+    {
+        private readonly Context _context;
+
+        private readonly ILogger _logger;
+
+        public Respository(Context context, ILoggerFactory loggerFactory)
+        {
+            _context = context;
+            _logger = loggerFactory.CreateLogger("IRepository");
+        }
+
+        public List&lt;Record&gt; GetAll()
+        {
+            _logger.LogCritical("Getting a the existing records");
+            return _context.Records.ToList();
+        }
+
+        public Record Get(int id)
+        {
+            return _context.Records.First(t =&gt; t.Id == id);
+        }
+
+        public void Post(Record record)
+        {
+            _context.Records.Add(record);
+            _context.SaveChanges();
+        }
+
+        public void Put(int id, Record record)
+        {
+            _context.Records.Update(record);
+            _context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var entity = _context.Records.First(t =&gt; t.Id == id);
+            _context.Records.Remove(entity);
+            _context.SaveChanges();
+        }
+    }
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>DF12B7BB-9B49-4C77-843B-27FC9BDD34CA</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efconfig</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:35:15Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:39:08Z</date>
+			<key>plainText</key>
+			<string>{
+    "Production": {
+        "SqliteConnectionString": "Data Source=dataeventrecords.sqlite"
+    }
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4E2C89EB-3A8D-44D7-BF59-A1B8B5A270A0</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efstartupconstructor</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:35:53Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:40:04Z</date>
+			<key>plainText</key>
+			<string>            _configuration = new ConfigurationBuilder(appEnv.ApplicationBasePath)
+                .AddEnvironmentVariables()
+                .AddJsonFile("config.json")
+                .Build();
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>0A38F859-2C95-4B54-971A-6E49450BBF3B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efstartupservices</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:36:18Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:40:14Z</date>
+			<key>plainText</key>
+			<string>            var connection = _configuration["Production:SqliteConnectionString"];
+
+            services.AddEntityFramework()
+                .AddSqlite()
+                .AddDbContext&lt;Context&gt;(options =&gt; options.UseSqlite(connection));
+
+            services.AddMvc();
+            services.AddScoped&lt;IRespository, Respository&gt;();
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>0F459F52-CD85-4FC2-A714-7141CA4B9835</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efcontroller</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:41:14Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:41:23Z</date>
+			<key>plainText</key>
+			<string>using System;
+using Microsoft.AspNet.Mvc;
+using EmptyApplication.Data;
+using EmptyApplication.Models;
+
+public class HomeController : Controller
+{
+	private IRespository _repository;
+
+	public HomeController(IRespository repository)
+	{
+		_repository = repository;
+	}
+
+	public IActionResult Index()
+	{
+		_repository.Post(new Record()
+		{
+			Name = "Test Record",
+			Description = "Another test record.",
+			Timestamp = DateTime.Now
+		});
+
+		var data = _repository.GetAll();
+
+		ViewBag.Data = data;
+
+		return View();
+	}
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>E1B5E589-53ED-4329-9BFC-90E78E6CCEE3</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efview</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:41:41Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:41:54Z</date>
+			<key>plainText</key>
+			<string>&lt;h1&gt;Hello from a view!&lt;/h1&gt;
+
+&lt;ul&gt;
+@foreach (var record in ViewBag.Data)
+{
+    &lt;li&gt;@record.Name&lt;/li&gt;
+}
+&lt;/ul&gt;
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>33802084-0E13-4D4F-BB79-B9BDE2ACB80D</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>efstartupusing</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:57:50Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:58:08Z</date>
+			<key>plainText</key>
+			<string>using Microsoft.Data.Entity;
+using EmptyApplication.Data;
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>613C2A24-EA94-4DF4-B44B-00367FA6C0EA</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>globaljson</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-09-11T18:59:30Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2015-09-11T18:59:36Z</date>
+			<key>plainText</key>
+			<string>{
+	"projects": [
+		"source"
+	],
+	"sdk": {
+		"version": "1.0.0-beta7"
+	}
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>03868EFA-7F06-490E-AE29-CC60F2B74E8E</string>
+		</dict>
+	</array>
+</dict>
+</plist>
