@@ -1,6 +1,13 @@
 
 # Developing with ASP.NET on Mac OS X
 
+TODO
+
+1. Print out demo outline and code snippet prompts
+1. Update old README file
+1. Keep external partition that has all of the NuGet packages cached
+1. Check in code snippets into the presentation repo
+
 Questions
 
 1. Setting up the git SSH keys was really painful...
@@ -12,14 +19,15 @@ Questions
 
 Preparation
 
+1. DONE Install Mac OS X on external drive
+1. DONE Install Yosemite update
+1. Install Xcode, TextExpander, sqlitebrowser, Chrome
+1. Setup SSH keys
+1. Setup .bash_profile
+1. Download presentation slides and PDF
+1. Make copy of the partition
 1. Setup GitHub repo
 1. Setup Azure Web App
-1. Install Mac OS X on external drive
-1. Install Yosemite update
-1. Install Xcode, TextExpander, sqlitebrowser, Chrome, GitHub client???
-1. Download presentation slides and PDF
-1. Setup .bash_profile
-1. Make copy of the partition
 
 # Slides
 
@@ -71,6 +79,10 @@ TODO (show image(s) of frustrated developers... heads in hands, etc.)
 This is where we'll put our project.
 
 ## DNVM, DNU, and DNX
+
+* DNVM (.NET Version Manager) - Set of command line instructions which allow you to configure your .NET Runtime (i.e. which version of the .NET Execution Framework to use)
+* DNX (.NET Execution Framework) - Runtime environment for creating .NET applications
+* DNU (.NET Development Utility) - Set of command line tools that allow us to build, package and publish projects created with DNX
 
 ## .NET Version Manager (DNVM)
 
