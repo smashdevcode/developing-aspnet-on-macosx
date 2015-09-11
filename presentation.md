@@ -1,19 +1,25 @@
 
 # Developing with ASP.NET on Mac OS X
 
+Questions
+
+1. Setting up the git SSH keys was really painful...
+ 1. How can I avoid that??? Install the GitHub client??? Other???
+1. Getting my .bash_profile setup was also a miss
+ 1. Put that onto the VM ahead of time
+1. Put my presentation notes on my Surface so that I can reference that during my presentation???
+    Is there a way to disable power save so that the tablet will stay on???
+
 Preparation
 
 1. Setup GitHub repo
 1. Setup Azure Web App
 1. Install Mac OS X on external drive
 1. Install Yosemite update
-1. Install Xcode, TextExpander, and sqlitebrowser
+1. Install Xcode, TextExpander, sqlitebrowser, Chrome, GitHub client???
 1. Download presentation slides and PDF
-
-Questions
-
-1. Put my presentation notes on my Surface so that I can reference that during my presentation???
-    Is there a way to disable power save so that the tablet will stay on???
+1. Setup .bash_profile
+1. Make copy of the partition
 
 # Slides
 
@@ -104,6 +110,28 @@ Use Yeoman to scaffold your application
 yo aspnet
 ```
 
+## .NET Development Utility (DNU)
+
+* Build, package and publish DNX projects
+* Building a project produces the binary outputs for the project
+* Packaging produces a NuGet package that can be uploaded to a package feed
+* Publishing collects all required runtime artifacts (the required DNX and packages)
+    into a single folder so that it can be deployed as an application
+
+## Restore
+
+After creating a new application or updating your project's dependencies call DNU
+to restore your packages.
+
+```
+dnu restore
+```
+
+* This also updates the `project.lock.json` file
+* The `project.lock.json` file contains all of the dependency graph information for your project
+
+While the packages are loading...
+
 ## DNX Projects
 
 * A DNX project is a folder with a project.json file
@@ -137,25 +165,7 @@ Your application will "use" middleware.
 * Optionally invoke the next middleware in the sequence or terminate the request directly
 * Use extension methods on IApplicationBuilder to configure middleware
 
-## .NET Development Utility (DNU)
-
-* Build, package and publish DNX projects
-* Building a project produces the binary outputs for the project
-* Packaging produces a NuGet package that can be uploaded to a package feed
-* Publishing collects all required runtime artifacts (the required DNX and packages)
-    into a single folder so that it can be deployed as an application
-
-## Restore and Build
-
-After creating a new application or updating your project's dependencies call DNU
-to restore your packages.
-
-```
-dnu restore
-```
-
-* This also updates the `project.lock.json` file
-* The `project.lock.json` file contains all of the dependency graph information for your project
+## Build
 
 Then build your project.
 
@@ -201,25 +211,6 @@ dnx kestrel
 * kmon was also an attempt to fix this
     https://github.com/henriksen/kmon
 
-## Intellisense in Visual Studio Code
-
-* Uses OmniSharp for statement completion
-* Current public version 0.7.0 doesn't work with Beta7
-* Insiders preview version 0.8.0 fixes the problem
-* OmniSharp is bundled with the editor (at least for now)
-* Updating the editor is necessary to update OmniSharp
-
-See https://code.visualstudio.com/Home/Connect
-
-Configuring Mac OS X for the Visual Studio Code Insiders Auto-Update
-
-1. Close Code if it is still running.
-1. Start the Terminal app.
-1. Type cd `~/Library/"Application Support"/Code`
-1. Type `nano storage.json`
-1. Replace `"updateChannel": "stable"` with `"updateChannel": "insiders"`
-1. Save the file and exit via Ctrl-X.
-
 ## Reverse Package Search
 
 https://packagesearch.azurewebsites.net/
@@ -236,6 +227,14 @@ Runtimes and packages are located at `{user directory}/.dnx`.
 
 ## Error Handling
 
+To see detailed error information...
+
+```
+app.UseErrorPage();
+```
+
+A more sophisticated approach...
+
 ```
 // Add the following to the request pipeline only in development environment.
 if (env.IsDevelopment())
@@ -249,16 +248,6 @@ else
     app.UseErrorHandler("/Home/Error");
 }
 ```
-
-# Logging
-
-TODO
-
-Explore how the logger works
-    ILoggerFactory loggerFactory
-    loggerFactory.MinimumLevel = LogLevel.Information;
-    loggerFactory.AddConsole();
-    loggerFactory.AddDebug();
 
 ## Web Root
 
@@ -312,27 +301,6 @@ yo aspnet:MvcController HomeController
 
 DI is built into not just MVC, but into the entire ASP.NET framework and runtime.
 
-## Configuration
-
-```
-Configuration = new Configuration()
-  .AddJsonFile("config.json")
-  .AddEnvironmentVariables();
-
-public IConfiguration Configuration { get; set; }
-```
-
-TODO Show options pattern???
-
-## Web API
-
-MVC and Web API have been unified into a single API.
-
-TODO
-
-What exactly does calling AddWebApiConventions() do???
-    Also see the Microsoft.AspNet.Mvc.WebApiCompatShim package for clues
-
 ## Data Access with Entity Framework 7
 
 Designed as a set of smaller, composable APIs that can be mixed and matched based on the feature set you need
@@ -364,11 +332,6 @@ Tools to browse your database
 
 TODO Test using data migrations
 TODO Config data access differently for production environment
-
-## \_ViewImports vs \_ViewStart
-
-* \_ViewStart.cshtml contains all of your global imperative code
-* \_ViewImports.cshtml contains all of your declarative statements
 
 ## Tag Helpers
 
@@ -457,7 +420,35 @@ GitHub: smashdevcode
 
 
 
+
+
 Things to cover...
+
+## \_ViewImports vs \_ViewStart
+
+* \_ViewStart.cshtml contains all of your global imperative code
+* \_ViewImports.cshtml contains all of your declarative statements
+
+## Configuration
+
+```
+Configuration = new Configuration()
+  .AddJsonFile("config.json")
+  .AddEnvironmentVariables();
+
+public IConfiguration Configuration { get; set; }
+```
+
+TODO Show options pattern???
+
+## Web API
+
+MVC and Web API have been unified into a single API.
+
+TODO
+
+What exactly does calling AddWebApiConventions() do???
+    Also see the Microsoft.AspNet.Mvc.WebApiCompatShim package for clues
 
 ## Improvements
 
@@ -500,3 +491,32 @@ Things to cover...
 * Typically the first managed entry point invoked by DNX
 * Responsible for handling dependency resolution, parsing project.json, providing additional services and invoking the application entry point
 * Provides a set of services to applications through dependency injection (for example, IServiceProvider, IApplicationEnvironment and ILoggerFactory)
+
+## Intellisense in Visual Studio Code
+
+* Uses OmniSharp for statement completion
+* Current public version 0.7.0 doesn't work with Beta7
+* Insiders preview version 0.8.0 fixes the problem
+* OmniSharp is bundled with the editor (at least for now)
+* Updating the editor is necessary to update OmniSharp
+
+See https://code.visualstudio.com/Home/Connect
+
+Configuring Mac OS X for the Visual Studio Code Insiders Auto-Update
+
+1. Close Code if it is still running.
+1. Start the Terminal app.
+1. Type cd `~/Library/"Application Support"/Code`
+1. Type `nano storage.json`
+1. Replace `"updateChannel": "stable"` with `"updateChannel": "insiders"`
+1. Save the file and exit via Ctrl-X.
+
+# Logging
+
+TODO
+
+Explore how the logger works
+    ILoggerFactory loggerFactory
+    loggerFactory.MinimumLevel = LogLevel.Information;
+    loggerFactory.AddConsole();
+    loggerFactory.AddDebug();

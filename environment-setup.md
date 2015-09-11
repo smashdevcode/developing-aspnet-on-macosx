@@ -19,6 +19,8 @@ See [Homebrew](http://brew.sh)
 
 `brew install git`
 
+Then configure git (see https://help.github.com/articles/set-up-git/)
+
 ### 4) Install Node.js
 
 `brew install node`
