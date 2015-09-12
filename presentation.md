@@ -3,19 +3,51 @@
 
 TODO
 
-Pre-install all non-DNX dependencies (it takes too long)
-Pre-install VS Code
-Install nodemon
-Install snippets
+
 Put dependencies in the repo???
     Can these just be xcopied into the .dnx directory???
 
-Update README file with environment.md
-Add section describing optional items (apps and whatnot)
 
-1. Print out demo outline and code snippet prompts
-1. Keep external partition that has all of the NuGet packages cached
-1. Check in code snippets into the presentation repo
+Update the Sandbox partition...
+    Pre-install all non-DNX dependencies (it takes too long)
+    Pre-install VS Code
+    Pre-install Atom and OmniSharp
+    Install nodemon
+    Install snippets
+    homebrew fetch... does this buy me anything for tomorrow???
+
+Switch back...
+
+Update README file with environment.md
+    Hmm... you can install just the Xcode command line tools with `xcode-select –install`
+    Add section describing optional items (apps and whatnot)
+
+Add slides about the .NET Trio
+    Take some time to explain things
+
+Do final edit on the demo.md outline
+    Add section for creating a the smallest web app???
+        Determine what is necessary for a min project.json file
+    Put extra content into a demo-cut.md file
+
+Check in code snippets into the presentation repo
+
+Switch to Sandbox...
+
+Grab latest version of the repo
+    Load the latest snippets
+
+Switch back...
+
+Update Dry Run partition
+
+DO ANOTHER RUN THROUGH USING THE DRY RUN PARTITION!!!
+    What is the keyboard shortcut for extending/mirroring displays???
+
+Make any other updates to the Sandbox partition... and then update the Code Camp partition
+    Keep the Dry Run partition around as a backup!!!
+
+Print out demo outline and code snippet prompts
 
 Questions
 
