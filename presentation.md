@@ -4,6 +4,8 @@
 TODO
 
 Make any other updates to the Sandbox partition... and then update the Code Camp partition
+    git config --global user.name "James Churchill"
+    git config --global user.email "james@smashdev.com"
     Make sure that accessibility keyboard shortcuts work (i.e. zoom in/out)
     Keep the Dry Run partition around as a backup!!!
 
