@@ -3,6 +3,8 @@
 
 TODO
 
+Fix my bash_profile... dnvm.sh has the wrong path
+
 Make any other updates to the Sandbox partition... and then update the Code Camp partition
     Keep the Dry Run partition around as a backup!!!
 
