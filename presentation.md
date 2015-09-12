@@ -5,15 +5,6 @@ TODO
 
 
 
-
-Sync repo
-  Remove packages from repo (file is too large)
-
-Switch back...
-
-
-
-
 Update Dry Run partition
 
 
