@@ -5,10 +5,6 @@ TODO
 
 
 
-Update Dry Run partition
-
-
-
 
 DO ANOTHER RUN THROUGH USING THE DRY RUN PARTITION!!!
     What is the keyboard shortcut for extending/mirroring displays???
