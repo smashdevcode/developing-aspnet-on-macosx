@@ -1,8 +1,6 @@
 
 # TODO
 
-Fix my bash_profile... dnvm.sh has the wrong path
-
 ## Questions
 
 1. Put my presentation notes on my Surface so that I can reference that during my presentation???
@@ -22,8 +20,8 @@ Fix my bash_profile... dnvm.sh has the wrong path
 
 ## Right before presentation...
 
-1. Clone GitHub repo
-1. Have Safari open to my repo
-1. Have private Chrome tab open to Azure
-1. Make sure that MiFi is setup
-1. Test WiFi speeds
+1. DONE Clone GitHub repo
+1. DONE Have Safari open to my repo
+1. DONE Have private Chrome tab open to Azure
+1. DONE Make sure that MiFi is setup
+1. DONE Test WiFi speeds
