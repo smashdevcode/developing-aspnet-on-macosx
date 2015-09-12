@@ -25,7 +25,9 @@ See [Homebrew](http://brew.sh)
 
 ### 3) Install Git
 
-`brew install git`
+```
+brew install git
+```
 
 Then configure git (see https://help.github.com/articles/set-up-git/)
 
@@ -37,13 +39,17 @@ brew install git bash-completion
 
 ### 4) Install Node.js
 
-`brew install node`
+```
+brew install node
+```
 
 Verify install with `node -v` and `npm -v`
 
 ### 5) Install Mono
 
-`brew install mono`
+```
+brew install mono
+```
 
 ### 6) Install Yeoman
 
@@ -55,7 +61,9 @@ To install Yeoman, run the command `npm install -g yo`.
 
 ### 7) Install Yeoman ASP.NET templates
 
-`npm install -g generator-aspnet`
+```
+npm install -g generator-aspnet
+```
 
 See https://www.npmjs.com/package/generator-aspnet for documentation
 
