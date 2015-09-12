@@ -3,7 +3,7 @@
 
 TODO
 
-Print out demo outline and code snippet prompts
+Fix my bash_profile... dnvm.sh has the wrong path
 
 Questions
 
