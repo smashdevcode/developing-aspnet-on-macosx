@@ -3,9 +3,6 @@
 
 TODO
 
-Make any other updates to the Sandbox partition... and then update the Code Camp partition
-    Keep the Dry Run partition around as a backup!!!
-
 Print out demo outline and code snippet prompts
 
 Questions
@@ -21,9 +18,9 @@ Preparation
 1. DONE Setup SSH keys
 1. DONE Setup .bash_profile
 1. DONE Download presentation slides and PDF
-1. Make copy of the partition
-1. Setup GitHub repo
-1. Setup Azure Web App
+1. DONE Make copy of the partition
+1. DONE Setup GitHub repo
+1. DONE Setup Azure Web App
 
 Right before presentation...
 
