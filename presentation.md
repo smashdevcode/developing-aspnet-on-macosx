@@ -3,11 +3,6 @@
 
 TODO
 
-
-Put dependencies in the repo???
-    Can these just be xcopied into the .dnx directory???
-
-
 Update the Sandbox partition...
     Pre-install all non-DNX dependencies (it takes too long)
     Pre-install VS Code
@@ -15,6 +10,7 @@ Update the Sandbox partition...
     Install nodemon
     Install snippets
     homebrew fetch... does this buy me anything for tomorrow???
+    Download packages onto the Desktop
 
 Switch back...
 
@@ -48,6 +44,8 @@ Make any other updates to the Sandbox partition... and then update the Code Camp
     Keep the Dry Run partition around as a backup!!!
 
 Print out demo outline and code snippet prompts
+
+Remove packages from repo (file is too large)
 
 Questions
 
