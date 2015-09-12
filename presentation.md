@@ -3,15 +3,6 @@
 
 TODO
 
-
-
-
-DO ANOTHER RUN THROUGH USING THE DRY RUN PARTITION!!!
-    What is the keyboard shortcut for extending/mirroring displays???
-
-
-
-
 Make any other updates to the Sandbox partition... and then update the Code Camp partition
     Keep the Dry Run partition around as a backup!!!
 
