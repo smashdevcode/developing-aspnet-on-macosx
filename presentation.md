@@ -3,49 +3,32 @@
 
 TODO
 
-Update the Sandbox partition...
-    Pre-install all non-DNX dependencies (it takes too long)
-    Pre-install VS Code
-    Pre-install Atom and OmniSharp
-    Install nodemon
-    Install snippets
-    homebrew fetch... does this buy me anything for tomorrow???
-    Download packages onto the Desktop
+
+
+
+Sync repo
+  Remove packages from repo (file is too large)
 
 Switch back...
 
-Update README file with environment.md
-    Hmm... you can install just the Xcode command line tools with `xcode-select –install`
-    Add section describing optional items (apps and whatnot)
 
-Add slides about the .NET Trio
-    Take some time to explain things
 
-Do final edit on the demo.md outline
-    Add section for creating a the smallest web app???
-        Determine what is necessary for a min project.json file
-    Put extra content into a demo-cut.md file
-
-Check in code snippets into the presentation repo
-
-Switch to Sandbox...
-
-Grab latest version of the repo
-    Load the latest snippets
-
-Switch back...
 
 Update Dry Run partition
 
+
+
+
 DO ANOTHER RUN THROUGH USING THE DRY RUN PARTITION!!!
     What is the keyboard shortcut for extending/mirroring displays???
+
+
+
 
 Make any other updates to the Sandbox partition... and then update the Code Camp partition
     Keep the Dry Run partition around as a backup!!!
 
 Print out demo outline and code snippet prompts
-
-Remove packages from repo (file is too large)
 
 Questions
 
@@ -123,40 +106,7 @@ James Churchill
 Twitter: @SmashDev
 GitHub: smashdevcode
 
-
-
-
-
-
-
-
-Things to cover...
-
-## \_ViewImports vs \_ViewStart
-
-* \_ViewStart.cshtml contains all of your global imperative code
-* \_ViewImports.cshtml contains all of your declarative statements
-
-## Configuration
-
-```
-Configuration = new Configuration()
-  .AddJsonFile("config.json")
-  .AddEnvironmentVariables();
-
-public IConfiguration Configuration { get; set; }
-```
-
-TODO Show options pattern???
-
-## Web API
-
-MVC and Web API have been unified into a single API.
-
-TODO
-
-What exactly does calling AddWebApiConventions() do???
-    Also see the Microsoft.AspNet.Mvc.WebApiCompatShim package for clues
+# Other things to cover...
 
 ## Improvements
 
@@ -218,13 +168,3 @@ Configuring Mac OS X for the Visual Studio Code Insiders Auto-Update
 1. Type `nano storage.json`
 1. Replace `"updateChannel": "stable"` with `"updateChannel": "insiders"`
 1. Save the file and exit via Ctrl-X.
-
-# Logging
-
-TODO
-
-Explore how the logger works
-    ILoggerFactory loggerFactory
-    loggerFactory.MinimumLevel = LogLevel.Information;
-    loggerFactory.AddConsole();
-    loggerFactory.AddDebug();

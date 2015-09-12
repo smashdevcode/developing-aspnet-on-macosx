@@ -7,6 +7,12 @@
 
 Installing Xcode is necessary as Homebrew requires some of the Xcode command line tools.
 
+Alternatively, you can just install the command line tools:
+
+```
+xcode-select –install
+```
+
 ### 2) Install Homebrew
 
 See [Homebrew](http://brew.sh)
@@ -20,6 +26,12 @@ See [Homebrew](http://brew.sh)
 `brew install git`
 
 Then configure git (see https://help.github.com/articles/set-up-git/)
+
+Optionally install Bash git completion:
+
+```
+brew install git bash-completion
+```
 
 ### 4) Install Node.js
 
@@ -42,6 +54,8 @@ To install Yeoman, run the command `npm install -g yo`.
 ### 7) Install Yeoman ASP.NET templates
 
 `npm install -g generator-aspnet`
+
+See https://www.npmjs.com/package/generator-aspnet for documentation
 
 ## The Headliners
 
@@ -71,6 +85,16 @@ To switch to the Core CLR version of the runtime, run the command `dnvm use 1.0.
 
 To change your default version of the runtime, run the command `dnvm use 1.0.0-beta7 -r coreclr -p`.
 
-### 9) Install VS Code
+## Optional Items
+
+### 1) Install VS Code
 
 See https://code.visualstudio.com/
+
+### 2) Atom
+
+See http://atom.io/
+
+### 3) SQLite Database Browser
+
+See http://sqlitebrowser.org/
