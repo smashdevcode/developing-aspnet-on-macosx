@@ -3,14 +3,6 @@
 
 ## Setup OS X Environment
 
-## Visual Studio Code
-
-* Officially Microsoft supported editor
-* Built on top of GitHub's Electron shell
-* Sublime Text and Atom also work great (thanks to OmniSharp)
-
-## Clone GitHub Repo
-
 ## DNVM, DNU, and DNX
 
 * DNVM (.NET Version Manager) - Set of command line instructions which allow you to configure your .NET Runtime (i.e. which version of the .NET Execution Framework to use)
@@ -21,19 +13,32 @@
 
 To install a different version
 
-`dnvm install 1.0.0-beta7`
+```
+dnvm install 1.0.0-beta7
+```
 
-Switch to a different version
+Switch to a different version:
 
 ```
 dnvm use 1.0.0-beta7
 dnvm use 1.0.0-beta7 -r coreclr
 ```
 
-To change your default version
+To change your default version:
 
 ```
 dnvm use 1.0.0-beta7 -p
+```
+
+To delete a runtime, just delete it off of the file system
+
+Note: When using coreclr (at least on OS X) you cannot build using the .NET 4.5.1 target.
+
+```
+"frameworks": {
+  "dnx451": {},
+  "dnxcore50": {}
+},
 ```
 
 ## Create New Empty Application
@@ -59,6 +64,15 @@ dnu restore
 * The `project.lock.json` file contains all of the dependency graph information for your project
 
 While the packages are loading...
+
+## Visual Studio Code
+
+* Officially Microsoft supported editor
+* Built on top of GitHub's Electron shell
+
+## Atom
+
+* Add OmniSharp and you've got another great editor
 
 ## DNX Projects
 

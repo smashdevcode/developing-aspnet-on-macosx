@@ -9,8 +9,6 @@ TODO
 
 
 
-
-
 !!! Setup code snippets
     Mark each section with a prefix code
 
@@ -130,6 +128,82 @@ Networking: Most of the networking libraries are not yet available. System.Net.P
 I/O: Paths up to the system-supported max path length are allowed, except for a few situations related to loading applications, assemblies, and resources.
 Globalization: Culture is assumed to be invariant and string operations related to sorting and searching assume ASCII.
 Data: SqlClient is not currently functional.
+
+
+
+
+
+ASP NET 5 Internals Deep Dive
+///////////////////////////////////////////////////////
+
+You can just delete runtimes from the file system to remove them
+
+Default and aliases are just stored in text files
+
+dnvm is global while dnx and dnu are runtime specific
+
+"default" runtime is in the system path while "active" is in the session path
+
+
+
+Internals of ASP.NET 5
+///////////////////////////////////////////////////////
+
+Middleware options
+    Use() - Run and continue to next (or exit)
+    Map() - Route match and fork
+    Run() - Run and exit
+
+
+
+Deep Dive Into the Insides of ASP.NET 5
+///////////////////////////////////////////////////////
+
+MVC 5 depended on System.Web.dll
+    System.Web contained code related to Classic ASP
+
+Full stack is open source
+    Completely out in the open... no secrets
+    Anyone can do pull requests against any part of the stack
+
+Use whatever tools you want
+    Everything runs from the command line
+
+Rosalyn is used to dynamically compile your app at runtime
+
+project.json
+    Combines parts of .csproj and package.config
+
+Dependencies only need to specified at the parent level
+
+wwwroot is the root of the application that the web server will use
+
+"dnx kestrel" maps to the "kestrel" command
+
+Startup
+    Configuration in the constructor
+        web.config and transforms have gone away
+    Configuring services
+    Adding middleware
+
+Command line tools
+    Used to be the "k" tools
+    kre -> dnx
+    kvm -> dnvm
+    kpm -> dnu
+
+Versioning
+    You can have multiple versions available in your dev environment
+    You can deploy apps that use different versions
+        Runtime is deployed with your app
+
+Everything that you can do from Linux and Mac you can do from Windows
+
+Kestrel
+    Cross platform web server developed by Microsoft
+    Built on top of libuv
+
+dnu can be used to package or publish your app
 
 
 
