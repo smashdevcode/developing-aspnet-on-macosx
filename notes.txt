@@ -1,33 +1,11 @@
 
 ASP.NET 5
 
-
-
-
 TODO
 
-
-
-
-!!! Setup code snippets
-    Mark each section with a prefix code
-
-!!! Specifying Source Paths
+Specifying Source Paths
     Try out loading MVC from source
         Add code path to global.json
-
-!!! Work through and rehearse installing components
-    How long does each step take over the MiFi???
-    Intermingle with slides???
-    Or just talk through what things are???
-
-
-
-
-
-
-Read research notes
-    Anything worth adding in???
 
 Prepare plan if I don't have internet connectivity
     Have local app (or VM) that has a project with all of the necessary dependencies installed
@@ -57,29 +35,6 @@ Do more testing with EF7
         Other???
     Working with the in-memory database
         Does this work as well???
-
-
-
-
-
-
-
-Read up on DNX
-    http://docs.asp.net/en/latest/dnx/overview.html
-    http://blogs.msdn.com/b/mvpawardprogram/archive/2015/06/18/demystifying-pcls-net-core-dnx-and-uwp-redux.aspx
-    What are the command line options???
-
-Read up on DNU
-    What all does it do???
-    What are the command options???
-
-Ability to add Browser Link???
-    app.UseBrowserLink();
-    Does this work on OS X???
-
-
-
-
 
 
 
@@ -128,8 +83,6 @@ Networking: Most of the networking libraries are not yet available. System.Net.P
 I/O: Paths up to the system-supported max path length are allowed, except for a few situations related to loading applications, assemblies, and resources.
 Globalization: Culture is assumed to be invariant and string operations related to sorting and searching assume ASCII.
 Data: SqlClient is not currently functional.
-
-
 
 
 
