@@ -1,61 +1,6 @@
 
 # Extra Stuff
 
-## Using MVC
-
-Add the following dependency:
-
-Snippet mvcdepend
-
-```
-"Microsoft.AspNet.Mvc": "6.0.0-beta7"
-```
-
-Then update the `Startup` class as follows:
-
-1. Add `using Microsoft.AspNet.Mvc;` statement - Snippet mvcusing
-1. Add `services.AddMvc();` to the `ConfigureServices` method - Snippet mvcservice
-1. Add `app.UseMvcWithDefaultRoute();` to the `Configure` method - Snippet mvcdefaultroute
-
-You can also explicitly provide your routes:
-
-Snippet mvcroute
-
-```
-// Add MVC to the request pipeline.
-app.UseMvc(routes =>
-{
-    routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
-
-    // Uncomment the following line to add a route for porting Web API 2 controllers.
-    // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
-});
-```
-
-Then add a POCO controller to the project.
-
-You can also use Yeoman to generate your controller.
-
-```
-yo aspnet:MvcController HomeController
-```
-
-## Fixing Live Reload
-
-* Visual Studio proper provides this experience out of the box
-* On OS X, you have to do a little extra work to get it to work
-* John Papa provided a bash script for this purpose
-    https://github.com/johnpapa/aspnet5-starter-demo#dnxmon
-* Needed to update to support recent changes to dnx
-* kmon was also an attempt to fix this
-    https://github.com/henriksen/kmon
-
-## Reverse Package Search
-
-https://packagesearch.azurewebsites.net/
-
 ## Diagnostics
 
 To view the runtime information...
@@ -128,6 +73,61 @@ else
     app.UseErrorHandler("/Home/Error");
 }
 ```
+
+## Using MVC
+
+Add the following dependency:
+
+Snippet mvcdepend
+
+```
+"Microsoft.AspNet.Mvc": "6.0.0-beta7"
+```
+
+Then update the `Startup` class as follows:
+
+1. Add `using Microsoft.AspNet.Mvc;` statement - Snippet mvcusing
+1. Add `services.AddMvc();` to the `ConfigureServices` method - Snippet mvcservice
+1. Add `app.UseMvcWithDefaultRoute();` to the `Configure` method - Snippet mvcdefaultroute
+
+You can also explicitly provide your routes:
+
+Snippet mvcroute
+
+```
+// Add MVC to the request pipeline.
+app.UseMvc(routes =>
+{
+    routes.MapRoute(
+        name: "default",
+        template: "{controller=Home}/{action=Index}/{id?}");
+
+    // Uncomment the following line to add a route for porting Web API 2 controllers.
+    // routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
+});
+```
+
+Then add a POCO controller to the project.
+
+You can also use Yeoman to generate your controller.
+
+```
+yo aspnet:MvcController HomeController
+```
+
+## Fixing Live Reload
+
+* Visual Studio proper provides this experience out of the box
+* On OS X, you have to do a little extra work to get it to work
+* John Papa provided a bash script for this purpose
+    https://github.com/johnpapa/aspnet5-starter-demo#dnxmon
+* Needed to update to support recent changes to dnx
+* kmon was also an attempt to fix this
+    https://github.com/henriksen/kmon
+
+## Reverse Package Search
+
+https://packagesearch.azurewebsites.net/
 
 ## Data Access with Entity Framework 7
 
