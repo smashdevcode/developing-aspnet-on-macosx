@@ -9,6 +9,7 @@ Using Homebrew...
 brew tap aspnet/dnx
 brew update
 brew install dnvm
+source dnvm.sh
 dnvm
 dnvm help
 dnvm list
@@ -190,7 +191,7 @@ Snippet globaljson
 ```
 {
 	"projects": [
-		"source"
+		"src"
 	],
 	"sdk": {
 		"version": "1.0.0-beta7"
