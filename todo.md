@@ -1,7 +1,6 @@
 
 # TODO
 
-1. Push in repo changes
 1. Test wireless slide remote in Sandbox
 1. Rehearse demos
 1. Practice code snippets
