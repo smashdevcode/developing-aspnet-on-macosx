@@ -1,7 +1,17 @@
 
 # TODO
 
-Fix my bash_profile... dnvm.sh has the wrong path
+1. Push in repo changes
+1. Test wireless slide remote in Sandbox
+1. Rehearse demos
+1. Practice code snippets
+1. Test publishing to Azure
+1. Copy Sandbox to newly renamed GCAD disk
+
+New Features to Test
+
+1. Referencing a dependency that specifies a newer version of the runtime will
+now cause a specific error to display
 
 ## Questions
 
@@ -27,3 +37,4 @@ Fix my bash_profile... dnvm.sh has the wrong path
 1. Have private Chrome tab open to Azure
 1. Make sure that MiFi is setup
 1. Test WiFi speeds
+1. Disable power save features on the Surface
