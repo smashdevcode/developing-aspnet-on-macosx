@@ -36,8 +36,8 @@ Then add the following to `Startup.Configure` method:
 Snippet staticfiles2
 
 ```
-app.UseStaticFiles();
 app.UseDefaultFiles();
+app.UseStaticFiles();
 ```
 
 You can also use the following method which combines the other two:
@@ -124,6 +124,10 @@ yo aspnet:MvcController HomeController
 * Needed to update to support recent changes to dnx
 * kmon was also an attempt to fix this
     https://github.com/henriksen/kmon
+
+```
+dnxmon
+```
 
 ## Reverse Package Search
 
